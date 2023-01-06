@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <style>
+        body{
+            background-color: #e94118;
+        }
+        .a{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #2f3640;
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+        }
+        .a:hover .b{
+            width: 200px;
+            padding: 0 6px;
+        }
+        .a:hover .c{
+            background-color: wheat;
+        }
+        .b{
+            border: none;
+            background: none;
+            /* 取消选中搜索框时的外边框 */
+            outline: none;
+            width: 0;
+            padding: 0;
+            transition: .4s;
+            line-height: 40px;
+            font-size: 20px;
+            color: wheat;
+        }
+        .c{
+            color: #e94118;
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .4s;
+        }
+        .d{
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            padding: 10px;
+            font-family: fantasy;
+            color: white;
+            font-size: 40px;
+        }
+        .e{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            padding: 10px;
+            font-family: fantasy;
+            color: white;
+            font-size: 40px;
+        }
+        .f{
+          position: absolute;
+          top: 9%;
+          right: 0%;
+          transform: translate(-50%,-50%);
+          height: 40px;
+          padding: 10px;
+          font-family: fantasy;
+          color: white;
+          font-size: 25px;
+          text-decoration: none;
+        }
+
+        #color4{ color: #E1E5EB; }
+
+        #sectionC{ height: 100%;padding: 80px 70px; }
+
+        /* image display */
+        #imageDiv{
+          white-space: nowrap;
+          margin: 10px 20px 60px 0px;
+          transition: transform .25s;
+          will-change: transform;
+          pointer-events: none;
+        }
+        #imgDisplay{
+          pointer-events: auto;
+          height: auto;
+          margin-right: 20px;
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+          transition: transform .25s;
+          transform-origin: center left;
+          z-index: 1;
+          vertical-align: top;
+        }
+
+    </style>
+</head>
+<body>
+
+  <div style="letter-spacing:4px;">
+    <a href="final.html">
+      <img src="images/home.png" alt="home" style=" margin-left: 20px; padding-top: 15px; height:70px; width:70px">
+    </a>
+    <a href="final.html" class="f">Kidslib</a>
+  </div>
+
+  <div class="d">
+    <p>Search any books you want XD:</p>
+  </div>
+    <div class="a">
+        <input type="text" class="b">
+        <a href="#" class="c">
+            <img src="search bar.png" style="width: 30px;">
+        </a>
+    </div>
+
+    <div class="e">
+      <div id="sectionC">
+        <hr>
+        <div id="imageDiv">
+          <p id="color4" style="font-size: 30px; font-family: "Times New Roman", Georgia, Serif;">Recommended books</p>
+
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book1.png" alt="book1" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book2.png" alt="book2" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book3.png" alt="book3" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book4.png" alt="book4" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book9.png" alt="Date a live Home" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book10.png" alt="Date a live Home" >
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+</body>
+</html>

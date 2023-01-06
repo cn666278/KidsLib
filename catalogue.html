@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue</title>
+    <style>
+        body{
+            background-color: #5FC133;
+        }
+        .a{
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #2f3640;
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+        }
+        .a:hover .b{
+            width: 200px;
+            padding: 0 6px;
+        }
+        .a:hover .c{
+            background-color: wheat;
+        }
+        .b{
+            border: none;
+            background: none;
+            /* 取消选中搜索框时的外边框 */
+            outline: none;
+            width: 0;
+            padding: 0;
+            transition: .4s;
+            line-height: 40px;
+            font-size: 20px;
+            color: wheat;
+        }
+        .c{
+            color: #e94118;
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .4s;
+        }
+        .d{
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            padding: 10px;
+            font-family: fantasy;
+            color: white;
+            font-size: 40px;
+        }
+        .e1{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            padding: 10px;
+            font-family: fantasy;
+            color: white;
+            font-size: 40px;
+        }
+        .e2{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            padding: 10px;
+            font-family: fantasy;
+            color: white;
+            font-size: 40px;
+        }
+        .e3{
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            padding: 10px;
+            font-family: fantasy;
+            color: white;
+            font-size: 40px;
+        }
+        .e4{
+            position: absolute;
+            top: 140%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            padding: 10px;
+            font-family: fantasy;
+            color: white;
+            font-size: 40px;
+        }
+        .e5{
+            position: absolute;
+            top: 180%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 40px;
+            padding: 10px;
+            font-family: fantasy;
+            color: white;
+            font-size: 40px;
+        }
+        .f{
+          position: absolute;
+          top: 9%;
+          right: 0%;
+          transform: translate(-50%,-50%);
+          height: 40px;
+          padding: 10px;
+          font-family: fantasy;
+          color: white;
+          font-size: 25px;
+          text-decoration: none;
+        }
+
+        #color4{ color: #E1E5EB; }
+
+        #sectionC{ height: 100%;padding: 80px 70px; }
+
+        /* image display */
+        #imageDiv{
+          white-space: nowrap;
+          margin: 10px 20px 60px 0px;
+          transition: transform .25s;
+          will-change: transform;
+          pointer-events: none;
+        }
+
+        #imgDisplay{
+          pointer-events: auto;
+          height: auto;
+          margin-right: 20px;
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+          transition: transform .25s;
+          transform-origin: center left;
+          z-index: 1;
+          vertical-align: top;
+        }
+
+        #myBtn {
+          display: none; /* Hidden by default */
+          position: fixed; /* Fixed/sticky position */
+          bottom: 20px; /* Place the button at the bottom of the page */
+          right: 25px; /* Place the button 30px from the right */
+          z-index: 99; /* Make sure it does not overlap */
+          border: none; /* Remove borders */
+          outline: none; /* Remove outline */
+          background-color: red; /* Set a background color */
+          color: white; /* Text color */
+          cursor: pointer; /* Add a mouse pointer on hover */
+          padding: 12px; /* Some padding */
+          border-radius: 5px; /* Rounded corners */
+          font-size: 18px; /* Increase font size */
+        }
+
+        #myBtn:hover {
+          background-color: #555; /* Add a dark-grey background on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+  <!-- back button -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+  <div style="letter-spacing:4px;">
+    <a href="final.html">
+      <img src="images/home.png" alt="home" style=" margin-left: 20px; padding-top: 15px; height:70px; width:70px">
+    </a>
+    <a href="final.html" class="f">Kidslib</a>
+  </div>
+
+  <div class="d">
+    <p>Catalogues</p>
+  </div>
+    <div class="a">
+        <input type="text" class="b">
+        <a href="#" class="c">
+            <img src="search bar.png" style="width: 30px;">
+        </a>
+    </div>
+
+    <div class="e1">
+      <div id="sectionC">
+        <hr>
+        <div id="imageDiv">
+          <p id="color4" style="font-size: 30px; font-family: "Times New Roman", Georgia, Serif;">Recommended books</p>
+
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book1.png" alt="book1" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book2.png" alt="book2" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book3.png" alt="book3" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book4.png" alt="book4" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book19.png" alt="Date a live Home" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book18.png" alt="Date a live Home" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="e2">
+      <div id="sectionC">
+        <hr>
+        <div id="imageDiv">
+          <p id="color4" style="font-size: 30px; font-family: "Times New Roman", Georgia, Serif;">Pet</p>
+
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book20.png" alt="book1" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book21.png" alt="book2" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book28.png" alt="book3" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book24.png" alt="book4" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book25.png" alt="Date a live Home" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book27.png" alt="Date a live Home" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="e3">
+      <div id="sectionC">
+        <hr>
+        <div id="imageDiv">
+          <p id="color4" style="font-size: 30px; font-family: "Times New Roman", Georgia, Serif;">Fairy tale</p>
+
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book5.png" alt="book1" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book6.png" alt="book2" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book8.png" alt="book3" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book9.png" alt="book4" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book10.png" alt="Date a live Home" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book11.png" alt="Date a live Home" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="e4">
+      <div id="sectionC">
+        <hr>
+        <div id="imageDiv">
+          <p id="color4" style="font-size: 30px; font-family: "Times New Roman", Georgia, Serif;">Animal</p>
+
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book26.png" alt="book1" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book22.png" alt="book2" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book30.png" alt="book3" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book23.png" alt="book4" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book29.png" alt="Date a live Home" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book15.png" alt="Date a live Home" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="e5">
+      <div id="sectionC">
+        <hr>
+        <div id="imageDiv">
+          <p id="color4" style="font-size: 30px; font-family: "Times New Roman", Georgia, Serif;">Story</p>
+
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book1.png" alt="book1" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book2.png" alt="book2" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book3.png" alt="book3" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book14.png" alt="book4" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book16.png" alt="book5" >
+          </div>
+          <div id="imgDisplay">
+            <img style="height:210px" src="books/book17.png" alt="book6" >
+          </div>
+          <hr>
+        </div>
+        <hr>
+      </div>
+    </div>
+
+
+</body>
+
+</html>

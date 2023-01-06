@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kids Library</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+
+  .mouse{
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-image: url('images/goat.gif');
+      background-size: cover;
+  }
+
+  /* bilibili header video */
+  .shell{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: #9980FA;
+  }
+
+
+  .navbar{
+    overflow: hidden;
+    padding-left: 50px;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+  }
+
+  .navbar a{
+    float: left;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  /* The mouse cursor appears gray when hovering over the navigation window */
+  .navbar a:hover{
+    background-color: grey;
+    color: black;  /* text color */
+  }
+
+  /* smooth scroll-behavior */
+  html{
+    scroll-behavior: smooth;
+  }
+
+  #mainHeader{
+    height: 500px;
+    /* background-color: #4E6891; */
+    background-color: #9980FA;
+    text-align: center;
+    font-family: fantasy;
+    padding-top: 40px;
+  }
+
+  #sectionA{
+    height: 100%;
+    padding: 80px 70px;
+  }
+
+  #sectionB{
+    height: 100%;
+    padding: 80px 70px;
+  }
+
+  #sectionE{
+    background-color: #9980FA;
+    padding-bottom: 0;
+  }
+
+  #img1{
+    height: 450px;
+  }
+
+  #color1{
+    color: black;
+  }
+
+  #color2{
+    color: #EFF3F6;
+  }
+
+  #color3{
+    color: #4563BF;
+  }
+
+  #color4{
+    color: white;
+  }
+
+  #color5{
+    color: #002BEB;
+  }
+
+  #myVideo{
+    padding-top: 38px;
+    width: 100%;
+  }
+
+  h1,h2,h3,h4,h5{
+    font-family: "Times New Roman", Georgia, Serif;
+
+  }
+
+  p{
+    font-size: 22px;
+    /* color: #FAD83D; */
+    font-family: "Times New Roman", Georgia, Serif;
+  }
+
+  a{
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  button{
+    padding: 20px;
+    border: 25px;
+  }
+
+  body{
+    background-image:linear-gradient(to right, #9980FA, #fbc2eb);
+    list-style: none;
+    background-color: white;
+    font-family: "Times New Roman", Georgia, Serif;
+  }
+
+  .button {
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button1 {
+    background-color: grey;
+    color: black;
+    border: 2px solid #4CAF50;
+  }
+
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+
+  /* search bar */
+  .topnav {
+  overflow: hidden;
+  /* background-color: #e9e9e9; */
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+
+  .topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    /* margin-top: 8px;
+    margin-right: 16px; */
+    border: none;
+    font-size: 17px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+
+    .topnav input[type=text] {
+      border: 1px solid #ccc;
+    }
+  }
+
+  /* slidenav */
+  #mySidenav a {
+    position: absolute;
+    margin-top: 380px;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+
+  #mySidenav a:hover {
+    left: 0;
+  }
+
+  #about {
+    top: 20px;
+    background-color: #04AA6D;
+  }
+
+  #blog {
+    top: 80px;
+    background-color: #2196F3;
+  }
+
+  #projects {
+    top: 140px;
+    background-color: #f44336;
+  }
+
+  #contact {
+    top: 200px;
+    background-color: #555
+  }
+
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 25px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 12px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  /* image display */
+  #imageDiv{
+    white-space: nowrap;
+    margin: 10px 20px 60px 0px;
+    transition: transform .25s;
+    will-change: transform;
+    pointer-events: none;
+  }
+  #imgDisplay{
+    pointer-events: auto;
+    height: auto;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: transform .25s;
+    transform-origin: center left;
+    z-index: 1;
+    vertical-align: top;
+  }
+
+  /* new add for bubble */
+  .shaky, .stage .menu a {
+    /* font-family: "shaky"; */
+    font-family: "Fredericka the great";
+    font-size: 15px;
+  }
+  .stage { width: 1280px; height: 674px; margin-left: -150px; position: relative; }
+  .stage > div { width: 1280px; height: 694px; position: absolute; top: 100%; left: 0; }
+  .stage .menu { width: 185px; text-align: center; }
+  .stage .menu a { width: 100%; display: table; position: absolute; bottom: 0; z-index: 0; font-size: 22px; text-align: center; color: #FFF; }
+  .lt-ie8 .stage .menu a { left: 0; top: 75%; }
+  .stage .menu span { display: table-cell; vertical-align: middle; margin: 0 auto; line-height: 1; }
+  .stage .cloud1 { background: url(images/cloud1.png) no-repeat; top: -230px; margin: -139px 0 0 -321px; }
+  .stage .bg-base { background: url(images/home-bg-base.png) no-repeat; top: 0; left: 270px; }
+  .stage .home-bg2-rain { background: url(images/home-bg2-rain.png) no-repeat 0 100%; }
+  .stage .home-bg3-cube { background: url(images/home-bg3-cube.png) no-repeat 0 100%; }
+  .stage .home-bg1-ele { background: url(images/home-bg1-ele.png) no-repeat 0 100%; }
+  .stage .home-bg-book { background: url(images/home-bg-book.png) no-repeat 0 100%; }
+  .stage .bulb-c2 { background: url(images/bulb-c2.png) no-repeat 50% 0; left: 798px; height: 304px; top: -304px; }
+  .stage .bulb-c2 span { padding: 0 34.5px; }
+  .stage .bulb-c1 { background: url(images/bulb-c1.png) no-repeat 50% 0; left: 357px; height: 313px; top: -313px; }
+  .stage .bulb-c1 span { padding: 0 38px; }
+  .stage .bulb-b2 { background: url(images/bulb-b2.png) no-repeat 50% 0; left: 230px; height: 206px; top: -206px; }
+  .stage .bulb-b2 span { padding: 0 25.5px; }
+  .stage .bulb-b1 { background: url(images/bulb-b1.png) no-repeat 50% 0; left: 123px; height: 347px; top: -347px; }
+  .stage .bulb-b1 span { padding: 0 26.5px; }
+  .stage .bulb-a3 { background: url(images/bulb-a3.png) no-repeat 50% 100%; left: 967px; height: 253px; top: -253px; }
+  .stage .bulb-a3 span { padding: 0 12px; }
+  .stage .bulb-a2 { background: url(images/bulb-a2.png) no-repeat 50% 0; left: 738px; height: 453px; top: -453px; }
+  .stage .bulb-a2 span { padding: 0 26.5px; }
+  .stage .bulb-a1 { background: url(images/bulb-a1.png) no-repeat 50% 0; left: 570px; height: 329px; top: -329px; }
+  .stage .bulb-a1 span { padding: 0 4px; }
+  .stage .home-cube { background: url(images/home-cube.png) no-repeat 0 100%; height: 270px; margin: 430px 0 0; top: -480px; bottom: 0; }
+  .stage .bulb-c2 > a { height: 105px; }
+  .stage .bulb-c1 > a { height: 108px; }
+  .stage .bulb-b2 > a { height: 142px; }
+  .stage .bulb-b1 > a { height: 135px; }
+  .stage .bulb-a3 > a { height: 167px; }
+  .stage .bulb-a2 > a { height: 142px; }
+  .stage .bulb-a1 > a { height: 184px; }
+  .stage .dialog { width: 178px; height: 94px; margin: 280px 0 0; position: absolute; left: auto; right: 132px; top: 407px; background: url(../images/dialog-cloud.png) no-repeat 50% 0; }
+  .stage .dialog a { width: 91px; height: 94px; padding: 0 24px; display: table; position: absolute; bottom: 0; font-size: 18px; text-align: center; color: #656565; }
+  .stage .dialog span { display: table-cell; vertical-align: middle; margin: 0 auto; line-height: 1; }
+  </style>
+  </head>
+<body>
+
+  <!-- mouse goat anime -->
+  <div class="mouse"></div>
+
+  <!-- back button -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+
+  <!-- bilibili video header -->
+  <div class="shell">
+      <video autoplay muted loop src="bvideo.mp4" class="video" style="z-index: 1;height: 100%;width:110%;transform: translate(36px,-8px);"></video>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-14">
+
+      <!-- section E -->
+      <div id="sectionE">
+        <div class="stage" style="center">
+          <div class="bg bg-base">&nbsp;</div>
+          <div class="bg cloud1" style="top: -20px;">&nbsp;</div>
+          <div class="bg home-bg2-rain" style="top: -20px; left: 230px;">&nbsp;</div>
+          <div class="bg home-bg3-cube" style="top: -20px; left: 230px;">&nbsp;</div>
+          <div class="bg home-bg1-ele" style="top: -20px; left: 230px;">&nbsp;</div>
+          <div class="bg home-bg-book" style="top: -20px; left: 230px;">&nbsp;</div>
+
+          <div class="menu bulb-c1" style="top: -20px; margin-top: 0px; left: 270px;">
+            <a href="activity.html"><span>Activity</span></a>
+          </div>
+          <div class="menu bulb-a3" style="top: -20px; margin-top: 0px;left: 430px;">
+            <a href="library.html"><span>Library</span></a>
+          </div>
+          <div class="menu bulb-b1" style="top: -20px; margin-top: 0px;left: 580px;">
+            <a href="random book.html"><span>Random Book</span></a>
+          </div>
+          <div class="menu bulb-a1" style="top: -20px; margin-top: 0px;left: 790px;">
+            <a href="catalogue.html"><span>Catalogue</span></a>
+          </div>
+          <div class="menu bulb-a2" style="top: -20px; margin-top: 0px;left: 950px;">
+            <a href="list.html"><span>Reading Lists</span></a>
+          </div>
+          <div class="menu bulb-c2" style="top: -20px; margin-top: 0px;left: 1100px;">
+            <a href="blog.html"><span>Blog</span></a>
+          </div>
+          <div class="menu bulb-b2" style="top: -20px; margin-top: 0px;left: 1300px;">
+            <a href="#"><span>Family Reading Club</span></a>
+          </div>
+          <div class="dialog" style="top: -20px;">&nbsp;</div>
+          <div class="bg home-cube" style="top: -20px;">&nbsp;</div>
+          </div>
+          </div>
+        </div>
+
+        <div id="mainHeader">
+          <p></p><br><br><br>
+          <img src="assets/p1.jpg" alt="p1" style="height:200px">
+          <p></p>
+          <b style="font-size: 30px; font-family: "Times New Roman", Georgia, Serif;">Kidslib . com</b>
+          <i><h4>A free digital library for kids</h4><br><br></i>
+
+        </div>
+
+        <div id="mySidenav" class="sidenav" style="z-index: 1;position: fixed;">
+          <a href="library.html" id="about">Library</a>
+          <a href="list.html" id="blog">List</a>
+          <a href="activity.html" id="projects">Activity</a>
+          <a href="dashboard.php" id="contact">User</a>
+        </div>
+
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+          </div>
+
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/p2.png" alt="p2" class="d-block" style="height:280px; width:100%">
+              </div>
+
+            <div class="carousel-item">
+              <img src="assets/p3.png" alt="p2" class="d-block" style="height:280px; width:100%">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/p4.png" alt="p2" class="d-block" style="height:280px; width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/p5.png" alt="p2" class="d-block" style="height:280px; width:100%">
+            </div>
+
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+        <div class="container mt-5" style="margin-top: 1.5rem!important;">
+          <script>
+              const shell = document.querySelector(".shell")
+              const video = document.querySelector(".video")
+              shell.addEventListener('mouseenter',function(e){
+                  this.x=e.clientX
+                  video.style.transition = 'none'
+              })
+              shell.addEventListener('mousemove',function(e){
+                  this._x=e.clientX
+                  const disx = this._x-this.x
+                  const move = 36 -disx/-20
+                  video.style.transform = `translate(${move}px,-8px)`
+              })
+              shell.addEventListener('mouseleave',function(e){
+                  video.style.transition = .3 +'s'
+                  video.style.transform = 'translate(36px,-8px)'
+              })
+          </script>
+
+        </div>
+    </div>
+
+
+      <!-- section A -->
+      <div class="main">
+        <div id="sectionA">
+          <hr>
+          <b id="color4" style="font-size: 30px; font-family: "Times New Roman", Georgia, Serif;">Everyone's Reading</b>
+          <p></p>
+
+          <div id="imageDiv">
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book12.png" alt="Date a live Home" >
+            </div>
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book7.png" alt="Date a live Home" >
+            </div>
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book13.png" alt="Date a live Home" >
+            </div>
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book14.png" alt="Date a live Home" >
+            </div>
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book19.png" alt="Date a live Home" >
+            </div>
+          </div>
+          <p id="color4">Here we present the top five books viewed, liked, and praised by readers every week.</p>
+
+        </div>
+      </div>
+
+      <!-- section B -->
+      <div class="main">
+        <div id="sectionB">
+          <hr>
+          <b id="color4" style="font-size: 30px; font-family: "Times New Roman", Georgia, Serif;">Audiobooks</b>
+          <div id="imageDiv">
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book1.png" alt="Date a live Home" >
+            </div>
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book2.png" alt="Date a live Home" >
+            </div>
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book3.png" alt="Date a live Home" >
+            </div>
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book4.png" alt="Date a live Home" >
+            </div>
+            <div id="imgDisplay">
+              <img style="height:300px" src="books/book9.png" alt="Date a live Home" >
+            </div>
+
+          </div>
+
+          <p></p>
+          <button type="button" class="btn btn-outline-warning"><a href="https://www.getepic.com/app/read/76488">The Snow Queen</a></button>
+          <button type="button" class="btn btn-outline-primary"><a href="https://www.getepic.com/app/read/70841">Pip & Squeak</a></button>
+          <button type="button" class="btn btn-outline-success"><a href="https://www.getepic.com/app/read/70002">Miriam at the River</a></button>
+          <button type="button" class="btn btn-outline-info"><a href="https://www.getepic.com/app/read/80389">Woofus - 'I don't want to learn'</a></button>
+          <button type="button" class="btn btn-outline-secondary"><a href="https://www.getepic.com/app/read/76142">Friends Are Not the Same</a></button>
+          <p></p>
+          <p id="color4">Audiobooks are designed to give you a more immersive, enjoyable reading experience, perfect for rest and before sleep.</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- footer -->
+<div class=" p-2 text-white text-center">
+  <p>Kidslib. Created by Chen nuo. July 16, 2022</p>
+</div>
+
+</body>
+
+<!-- script for goat mouse anime -->
+<script>
+    let img = document.querySelector('.mouse')
+    let deg = 0
+    let imgx = 0
+    let imgy = 0
+    let imgl = 0
+    let imgt = 0
+    let y = 0
+    let index = 0
+
+    window.addEventListener('mousemove',function(xyz){
+        imgx = xyz.x - img.offsetLeft - img.clientWidth /2
+        imgy = xyz.y - img.offsetTop - img.clientHeight /2
+        deg = 360*Math.atan(imgy/imgx)/(2*Math.PI)
+        index= 0
+        let x = event.clientX
+        if(img.offsetLeft<x){
+            y=-180
+        }else{
+            y=0
+        }
+    })
+    setInterval(()=>{
+        img.style.transform = "rotateZ("+deg+"deg) rotateY("+y+"deg)"
+        index++
+        if(index<50){
+            imgl+=imgx/50
+            imgt+=imgy/50
+        }
+        img.style.left = imgl+"px"
+        img.style.top = imgt+"px"
+    },10)
+</script>
+
+</html>

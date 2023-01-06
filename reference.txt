@@ -1,0 +1,21 @@
+
+References:
+
+1. Home Page design:
+https://www.hkpl.gov.hk/en/kids/index.html
+2. Website contents design:
+https://www.getepic.com/app
+3. Mouse image(goat)following script:
+https://goatchen.coding.net/public/html-css/HTML-CSS/git/files/master/2021.10.24.%E9%BC%A0%E6%A0%87%E8%B7%9F%E9%9A%8F
+4. Books images:
+https://www.getepic.com/app
+5. Home page video display:
+https://www.bilibili.com/
+6. Book Reading
+https://www.getepic.com/app/read/79501
+7.
+
+8. Gradient color:
+https://uigradients.com/#Dania
+9. More Colors:
+https://color.adobe.com/zh/create/color-wheel
